@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6E5CAE5-1C95-4132-8961-D59568E1F798}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI_QuanLySanBong</RootNamespace>
+    <AssemblyName>GUI_QuanLySanBong</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net45\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\AccountController.cs" />
+    <Compile Include="Controller\HoaDonController.cs" />
+    <Compile Include="Controller\KhachHangController.cs" />
+    <Compile Include="Controller\LoaiSanController.cs" />
+    <Compile Include="Controller\SanController.cs" />
+    <Compile Include="Controller\ThueSanController.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Alert1.cs" />
+    <Compile Include="Form_Alert1.designer.cs">
+      <DependentUpon>Form_Alert1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDatSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDatSan.designer.cs">
+      <DependentUpon>FrmDatSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHeThong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHeThong.designer.cs">
+      <DependentUpon>FrmHeThong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLySan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLySan.Designer.cs">
+      <DependentUpon>FrmQuanLySan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyKinhDoanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyKinhDoanh.Designer.cs">
+      <DependentUpon>FrmQuanLyKinhDoanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AccountModel.cs" />
+    <Compile Include="Model\HoaDonModel.cs" />
+    <Compile Include="Model\KetNoi.cs" />
+    <Compile Include="Model\KhachHangModel.cs" />
+    <Compile Include="Model\LoaiSanModel.cs" />
+    <Compile Include="Model\SanModel.cs" />
+    <Compile Include="Model\ThueSan.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLySanBongDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLySanBongDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ThemeColor.cs" />
+    <Compile Include="ThuesanTableAdapter.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Alert1.resx">
+      <DependentUpon>Form_Alert1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDatSan.resx">
+      <DependentUpon>FrmDatSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHeThong.resx">
+      <DependentUpon>FrmHeThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLySan.resx">
+      <DependentUpon>FrmQuanLySan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyKinhDoanh.resx">
+      <DependentUpon>FrmQuanLyKinhDoanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuanLySanBongDataSet.xsc">
+      <DependentUpon>QuanLySanBongDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLySanBongDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLySanBongDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QuanLySanBongDataSet.xss">
+      <DependentUpon>QuanLySanBongDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\z2989338132124_5e2072709dbe3576daba4f0fe6dfeed5.jpg" />
+    <None Include="Resources\account_512px.png" />
+    <Content Include="Resources\add stock.png" />
+    <None Include="Resources\add stock1.png" />
+    <None Include="Resources\add stock2.png" />
+    <Content Include="Resources\add.png" />
+    <Content Include="Resources\anh-bong-da-tren-san-co_105531274.jpg" />
+    <Content Include="Resources\Backgroup.png" />
+    <Content Include="Resources\Backgroup1.png" />
+    <Content Include="Resources\baseline_assignment_black_24dp.png" />
+    <Content Include="Resources\baseline_description_black_24dp.png" />
+    <Content Include="Resources\baseline_email_black_24dp.png" />
+    <Content Include="Resources\baseline_event_available_black_24dp.png" />
+    <Content Include="Resources\baseline_favorite_black_24dp.png" />
+    <Content Include="Resources\baseline_home_black_24dp.png" />
+    <Content Include="Resources\baseline_menu_black_24dp.png" />
+    <Content Include="Resources\baseline_settings_black_24dp.png" />
+    <Content Include="Resources\baseline_shopping_cart_black_24dp.png" />
+    <Content Include="Resources\baseline_view_list_black_24dp.png" />
+    <Content Include="Resources\baseline_vpn_key_black_24dp.png" />
+    <Content Include="Resources\billie_eilish.jpg" />
+    <Content Include="Resources\bItch absInthe.jpg" />
+    <Content Include="Resources\boss_man-128.png" />
+    <Content Include="Resources\calendar.jpg" />
+    <Content Include="Resources\cancel-512.png" />
+    <None Include="Resources\cauthu.png" />
+    <None Include="Resources\cancel-5121.png" />
+    <None Include="Resources\cancel-5122.png" />
+    <Content Include="Resources\cerrar.png" />
+    <Content Include="Resources\chia-se-nhung-loi-ich-khi-choi-ca-do-bong-da-qua-mang-thumb.jpg" />
+    <Content Include="Resources\coca.jpg" />
+    <None Include="Resources\debut.JPG" />
+    <None Include="Resources\error.png" />
+    <Content Include="Resources\euro-2020-ball-uniforia.jpg" />
+    <None Include="Resources\exit_100px.png" />
+    <None Include="Resources\exit_32px.png" />
+    <None Include="Resources\gear_100px.png" />
+    <None Include="Resources\gear_48px.png" />
+    <None Include="Resources\goal_net_48px.png" />
+    <None Include="Resources\expensive_price_40px.png" />
+    <None Include="Resources\football_2_50px.png" />
+    <Content Include="Resources\hinh-nen-qua-bong-da-17.jpg" />
+    <Content Include="Resources\hqdefault.jpg" />
+    <Content Include="Resources\ico-flickr.png" />
+    <Content Include="Resources\ico-soc1.gif" />
+    <Content Include="Resources\ico-soc2.gif" />
+    <Content Include="Resources\ico-soc3.gif" />
+    <Content Include="Resources\ico-soc4.gif" />
+    <Content Include="Resources\ico-soc5.gif" />
+    <Content Include="Resources\ico-soc6.gif" />
+    <Content Include="Resources\ico1.png" />
+    <Content Include="Resources\ico2.png" />
+    <Content Include="Resources\ico3.png" />
+    <None Include="Resources\icons8_cancel_25px2.png" />
+    <Content Include="Resources\icon_dollar.gif" />
+    <Content Include="Resources\icon_loto.gif" />
+    <Content Include="Resources\icon_stock.gif" />
+    <None Include="Resources\invisible_60px1.png" />
+    <None Include="Resources\kisspng-computer-icons-bar-chart-statistics-statistics-icon-5b5689e4e811a2.5880632415323980529506.png" />
+    <None Include="Resources\info.png" />
+    <Content Include="Resources\login-512.png" />
+    <Content Include="Resources\login2.png" />
+    <Content Include="Resources\login21.png" />
+    <Content Include="Resources\login22.png" />
+    <Content Include="Resources\minimazar.png" />
+    <Content Include="Resources\mirinda.jpg" />
+    <Content Include="Resources\new customers.png" />
+    <None Include="Resources\new customers1.png" />
+    <None Include="Resources\new customers2.png" />
+    <Content Include="Resources\nuocsuoi.jpg" />
+    <Content Include="Resources\pesi.jpg" />
+    <Content Include="Resources\photo.jpg" />
+    <Content Include="Resources\res.png" />
+    <None Include="Resources\reset_undo_arrow_icon_149006.png" />
+    <None Include="Resources\reset_undo_arrow_icon_1490061.png" />
+    <None Include="Resources\reset_undo_arrow_icon_1490062.png" />
+    <None Include="Resources\reset_undo_arrow_icon_1490063.png" />
+    <Content Include="Resources\sanbong11.png" />
+    <Content Include="Resources\save1.jpg" />
+    <Content Include="Resources\save2.jpg" />
+    <Content Include="Resources\search invoice.png" />
+    <None Include="Resources\search invoice1.png" />
+    <Content Include="Resources\search.gif" />
+    <Content Include="Resources\soc-ico1.png" />
+    <Content Include="Resources\soc-ico2.png" />
+    <Content Include="Resources\soc-ico3.png" />
+    <Content Include="Resources\soc-ico4.png" />
+    <Content Include="Resources\soc-ico5.png" />
+    <None Include="Resources\soccer_ball_48px.png" />
+    <Content Include="Resources\sting.jpg" />
+    <None Include="Resources\textbox_password.png" />
+    <None Include="Resources\textbox_user_1.jpg" />
+    <None Include="Resources\textbox_user_2.jpg" />
+    <None Include="Resources\textbox_user_3.jpg" />
+    <None Include="Resources\textbox_user_4.jpg" />
+    <None Include="Resources\textbox_user_5.jpg" />
+    <None Include="Resources\textbox_user_6.jpg" />
+    <None Include="Resources\textbox_user_7.jpg" />
+    <None Include="Resources\textbox_user_8.jpg" />
+    <None Include="Resources\textbox_user_9.jpg" />
+    <None Include="Resources\textbox_user_10.jpg" />
+    <None Include="Resources\textbox_user_11.jpg" />
+    <None Include="Resources\textbox_user_12.jpg" />
+    <None Include="Resources\textbox_user_13.jpg" />
+    <None Include="Resources\textbox_user_14.jpg" />
+    <None Include="Resources\textbox_user_15.jpg" />
+    <None Include="Resources\textbox_user_16.jpg" />
+    <None Include="Resources\textbox_user_17.jpg" />
+    <None Include="Resources\textbox_user_18.jpg" />
+    <None Include="Resources\textbox_user_19.jpg" />
+    <None Include="Resources\textbox_user_20.jpg" />
+    <None Include="Resources\textbox_user_21.jpg" />
+    <None Include="Resources\textbox_user_22.jpg" />
+    <None Include="Resources\textbox_user_23.jpg" />
+    <None Include="Resources\textbox_user_24.jpg" />
+    <None Include="Resources\textbox_user_Clicked.JPG" />
+    <None Include="Resources\success.png" />
+    <Content Include="Resources\thanhtoan.jpg" />
+    <None Include="Resources\thongke.jpg" />
+    <Content Include="Resources\tim1.jpg" />
+    <Content Include="Resources\top-hinh-nen-bong-da-dep-62.jpg" />
+    <None Include="Resources\traibanh.png" />
+    <None Include="Resources\Uchiha Eyes_48px.png" />
+    <None Include="Resources\traibanh1.png" />
+    <Content Include="Resources\userImage.png" />
+    <None Include="Resources\userImage1.png" />
+    <Content Include="Resources\UTH.png" />
+    <Content Include="Resources\Voucher.png" />
+    <None Include="Resources\Voucher1.png" />
+    <None Include="Resources\Voucher2.png" />
+    <Content Include="Resources\wallpaperflare.com_wallpaper %281%29.jpg" />
+    <None Include="Resources\warning.png" />
+    <Content Include="Resources\xuất.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

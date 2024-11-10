@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Guna.UI2.WinForms</id>
+    <version>2.0.4.4</version>
+    <title>Guna.UI2.WinForms</title>
+    <authors>Sobatdata, Ilham Mutaqin, Russell Chidhakwa</authors>
+    <owners>Sobatdata, Ilham Mutaqin, Russell Chidhakwa</owners>
+    <licenseUrl>https://www.nuget.org/packages/Guna.UI2.WinForms/2.0.4.4/license</licenseUrl>
+    <projectUrl>https://gunaui.com/</projectUrl>
+    <iconUrl>https://api.nuget.org/v3-flatcontainer/guna.ui2.winforms/2.0.4.4/icon</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>WARNING: PLEASE BE CAREFUL WITH FAKE PACKAGES! Please visit 'https://www.nuget.org/profiles/Sobatdata' to check the authenticity of the package.
+Guna UI is the suite for creating groundbreaking desktop app UI. It is for developers targeting the .NET Windows Forms platform.</description>
+    <summary />
+    <releaseNotes>WARNING: PLEASE BE CAREFUL WITH FAKE PACKAGES! 
+Check package authenticity before installing: https://www.nuget.org/profiles/Sobatdata
+
+Note: Before updating Guna.UI, don't forget to backup your project!!
+
++ Guna.UI2.Winforms supports .NET 7</releaseNotes>
+    <copyright>© 2022 Sobatdata Technology</copyright>
+    <tags>c# vb winforms controls .net guna ui guna-ui framework gunaframework guna-framework ui-controls sobatdata</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.0" />
+      <group targetFramework=".NETFramework4.5" />
+      <group targetFramework=".NETFramework4.6.1" />
+      <group targetFramework=".NETFramework4.7.2" />
+      <group targetFramework=".NETFramework4.8" />
+      <group targetFramework="Unsupported0.0">
+        <dependency id="System.Management" version="6.0.0" />
+      </group>
+      <group targetFramework=".NETFramework6.0-windows7.0">
+        <dependency id="System.Management" version="6.0.0" />
+      </group>
+      <group targetFramework=".NETFramework7.0-windows7.0">
+        <dependency id="System.Management" version="7.0.0" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Design" targetFramework=".NETFramework4.0, .NETFramework4.5, .NETFramework4.6.1, .NETFramework4.7.2, .NETFramework4.8" />
+      <frameworkAssembly assemblyName="System.Management" targetFramework=".NETFramework4.0, .NETFramework4.5, .NETFramework4.6.1, .NETFramework4.7.2, .NETFramework4.8" />
+      <frameworkAssembly assemblyName="System.Web" targetFramework=".NETFramework4.0, .NETFramework4.5, .NETFramework4.6.1, .NETFramework4.7.2, .NETFramework4.8" />
+    </frameworkAssemblies>
+  </metadata>
+</package>
