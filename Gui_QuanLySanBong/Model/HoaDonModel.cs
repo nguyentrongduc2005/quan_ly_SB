@@ -31,6 +31,18 @@ namespace GUI_QuanLySanBong.Model
             conn.Close();
             return dt;
         }
+        public DataTable HienThiDuLieuDoanhThu() //trả về 1 bảng
+        {
+            conn = kn.conDB();
+            conn.Open();
+            string sql = "SELECT * FROM DoanhThu";
+            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            return dt;
+        }
+
         public int ExecuteNonQuery(string sql)
         {
             int dung = 0;
@@ -160,6 +172,45 @@ namespace GUI_QuanLySanBong.Model
             string sqlSua = "UPDATE HoaDon set Ma_KhachHang= '" + makh + "', Ma_San= '" + masan + "',NgayLap_HD = '" + date + "',TongPhut_Da = '" + tongphutda + "',DonGia = '" + dongia + "',TongTien_HD = '" + tongtien + "' where Ma_HD= '" + maHD + "'";
             bool kt = false;
             if (ExecuteNonQuery(sqlSua) > 0)
+            {
+                kt = true;
+            }
+            return kt;
+        }
+
+        public bool LuuHD(string maHD)
+        {
+            conn = kn.conDB();
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM HoaDon WHERE Ma_HD = @MaHD", conn);
+            cmd.Parameters.AddWithValue("@MaHD", maHD); // Thêm tham số để tránh SQL Injection
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            if (dr.Read())
+            {
+                string query = "INSERT INTO DoanhThu (Ma_KhachHang, Ma_San, NgayLap_HD, TongPhut_Da, DonGia, TongTien_HD) VALUES (@Ma_KhachHang, @Ma_San, @NgayLap_HD, @TongPhut_Da, @DonGia, @TongTien_HD)";
+
+                using (SqlCommand cmd2 = new SqlCommand(query, conn))
+                {
+                    // Define parameters and their values
+                    cmd2.Parameters.AddWithValue("@Ma_San", dr["Ma_San"]);
+                    cmd2.Parameters.AddWithValue("@Ma_KhachHang", dr["Ma_KhachHang"]);
+                    cmd2.Parameters.AddWithValue("@NgayLap_HD", (DateTime)dr["NgayLap_HD"]);
+                    cmd2.Parameters.AddWithValue("@TongPhut_Da", dr["TongPhut_Da"]);
+                    cmd2.Parameters.AddWithValue("@DonGia", dr["DonGia"]);
+                    cmd2.Parameters.AddWithValue("@TongTien_HD", dr["TongTien_HD"]);
+
+                    dr.Close(); // Đóng SqlDataReader trước khi thực hiện lệnh insert
+                    cmd2.ExecuteNonQuery();
+                }
+            }
+
+            conn.Close(); // Đóng kết nối sau khi hoàn thành
+
+            string sqlXoa = "DELETE FROM HoaDon WHERE Ma_HD= '" + maHD + "'";
+            bool kt = false;
+            if (ExecuteNonQuery(sqlXoa) > 0)
             {
                 kt = true;
             }

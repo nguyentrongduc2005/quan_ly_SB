@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using GUI_QuanLySanBong.Controller;
 using GUI_QuanLySanBong.Model;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace GUI_QuanLySanBong
 {
@@ -83,6 +84,20 @@ namespace GUI_QuanLySanBong
 
         private void btnDatSan_Click(object sender, EventArgs e)
         {
+            DateTime tgHienTai = DateTime.Now;
+            long timestampTgHienTai = new DateTimeOffset(tgHienTai).ToUnixTimeSeconds();
+
+
+            DateTime datebatdau = dateBD.Value;
+            DateTime dateketthuc = dateKT.Value;
+            DateTime timeBatDau = dtGioBatDau.Value;
+            DateTime timeKetThuc = dtGioKetThuc.Value;
+
+            DateTime batdau = new DateTime(datebatdau.Year, datebatdau.Month, datebatdau.Day, timeBatDau.Hour, timeBatDau.Minute, 0);
+            long timestampBatDau = new DateTimeOffset(batdau).ToUnixTimeSeconds();
+
+            DateTime ketthuc = new DateTime(dateketthuc.Year, dateketthuc.Month, dateketthuc.Day, timeKetThuc.Hour, timeKetThuc.Minute, 0);
+            long timestampKetThuc = new DateTimeOffset(ketthuc).ToUnixTimeSeconds();
 
             //Thuê sân
             if (cbbLoaiThue.SelectedIndex == 0)
@@ -110,6 +125,33 @@ namespace GUI_QuanLySanBong
             //Đặt sân
             else
             {
+                Debug.WriteLine("aloooooooooo");
+                Debug.WriteLine(timestampTgHienTai);
+                Debug.WriteLine(timestampBatDau);
+                Debug.WriteLine(timestampKetThuc);
+                if (timestampBatDau < timestampTgHienTai)
+                {
+                    Debug.WriteLine("loi");
+                    MessageBox.Show("thoi gian khong hop le 1");
+                    return;
+                }
+
+                if (timestampKetThuc < timestampBatDau)
+                {
+                    Debug.WriteLine("loi");
+                    MessageBox.Show("thoi gian khong hop le 2");
+                    return;
+                }
+
+                if (timestampKetThuc - timestampBatDau < 3600)
+                {
+                    Debug.WriteLine("loi");
+                    MessageBox.Show("khong du 60p");
+                    return;
+                }
+
+
+
                 DateTime ngayBatDau = dateBD.Value.Date + dtGioBatDau.Value.TimeOfDay;
                 DateTime ngayKetThuc = dateKT.Value.Date + dtGioKetThuc.Value.TimeOfDay;
 
@@ -264,6 +306,7 @@ namespace GUI_QuanLySanBong
                     {
                         MessageBox.Show("Trả sân thành công");
                         LoadThuesan();
+                        dataGridView1.CurrentRow.Cells[0].Value.ToString();
                         try
                         {
                             if (hd.ThemHoaDon(cbbmakh.SelectedValue.ToString(), cbbsan.SelectedValue.ToString(), ngayKetThuc, soGio, Convert.ToInt32(nbDonGia.Value), thanhTien))

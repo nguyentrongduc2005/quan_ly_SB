@@ -18,6 +18,10 @@ namespace GUI_QuanLySanBong.Controller
         {
             return hDMod.HienThiDuLieu();
         }
+        public DataTable HienThiDuLieuDoanhThu()
+        {
+            return hDMod.HienThiDuLieuDoanhThu();
+        }
         public bool ThemDuLieuHoaDon(string makh, string masan, DateTime ngaylaphd,double tongphutda, float dongia, float thanhtien)
         {
             return hDMod.ThemHoaDon(makh,masan,ngaylaphd,tongphutda,dongia,thanhtien);
@@ -43,6 +47,10 @@ namespace GUI_QuanLySanBong.Controller
         public bool XoaDuLieuHD(string maHD)
         {
             return hDMod.XoaHD(maHD);
+        }
+        public bool LuuDuLieuHD(string maHD)
+        {
+            return hDMod.LuuHD(maHD);
         }
         public bool SuaDuLieuHD(string maHD, string makh, string masan, string date, string tongphutda, string dongia, string tongtien)
         {

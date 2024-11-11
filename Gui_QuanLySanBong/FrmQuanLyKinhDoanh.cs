@@ -55,6 +55,7 @@ namespace GUI_QuanLySanBong
         {
             LoadKH();
             LoadHoaDon();
+            LoadDoanhThu();
             cmbKH.DataSource = HDControl.HienThiDuLieuCboxKH();
             cmbKH.DisplayMember = "Ma_KhachHang";
             cmbKH.ValueMember = "Ma_KhachHang";
@@ -184,20 +185,41 @@ namespace GUI_QuanLySanBong
             }
         }
 
+        public void LoadDoanhThu()
+        {
+            try
+            {
+                dtgv_doanhthu.AutoGenerateColumns = false;
+                DataTable dtHD = new DataTable();
+                dtHD = HDControl.HienThiDuLieuDoanhThu();
+                dtgv_doanhthu.DataSource = dtHD;
+                dtgv_doanhthu.Columns[0].DataPropertyName = "Ma_KhachHang";
+                dtgv_doanhthu.Columns[1].DataPropertyName = "Ma_San";
+                dtgv_doanhthu.Columns[2].DataPropertyName = "NgayLap_HD";
+                dtgv_doanhthu.Columns[3].DataPropertyName = "TongPhut_Da";
+                dtgv_doanhthu.Columns[4].DataPropertyName = "DonGia";
+                dtgv_doanhthu.Columns[5].DataPropertyName = "TongTien_HD";
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi");
+            }
+        }
+
         private void btn_ThongKeNam_Click(object sender, EventArgs e)
         {
             try
             {
-                dataGridView1.AutoGenerateColumns = false;
+                dtgv_doanhthu.AutoGenerateColumns = false;
                 DataTable dtHD = new DataTable();
                 dtHD = HDControl.HienThiDuLieuTheoNam(comboBox1.Text);
-                dataGridView1.DataSource = dtHD;
-                dataGridView1.Columns[0].DataPropertyName = "Ma_KhachHang";
-                dataGridView1.Columns[1].DataPropertyName = "Ma_San";
-                dataGridView1.Columns[2].DataPropertyName = "NgayLap_HD";
-                dataGridView1.Columns[3].DataPropertyName = "TongPhut_Da";
-                dataGridView1.Columns[4].DataPropertyName = "DonGia";
-                dataGridView1.Columns[5].DataPropertyName = "TongTien_HD";
+                dtgv_doanhthu.DataSource = dtHD;
+                dtgv_doanhthu.Columns[0].DataPropertyName = "Ma_KhachHang";
+                dtgv_doanhthu.Columns[1].DataPropertyName = "Ma_San";
+                dtgv_doanhthu.Columns[2].DataPropertyName = "NgayLap_HD";
+                dtgv_doanhthu.Columns[3].DataPropertyName = "TongPhut_Da";
+                dtgv_doanhthu.Columns[4].DataPropertyName = "DonGia";
+                dtgv_doanhthu.Columns[5].DataPropertyName = "TongTien_HD";
             }
             catch
             {
@@ -207,11 +229,11 @@ namespace GUI_QuanLySanBong
         }
         public void tong()
         {
-            int tien = dataGridView1.Rows.Count;
+            int tien = dtgv_doanhthu.Rows.Count;
             float thanhtien = 0;
             for (int i = 0; i < tien; i++)
             {
-                thanhtien += float.Parse(dataGridView1.Rows[i].Cells[5].Value.ToString());
+                thanhtien += float.Parse(dtgv_doanhthu.Rows[i].Cells[5].Value.ToString());
             }
             label30.Text ="Tổng doanh thu: "+ thanhtien.ToString() +" VNĐ";
         }
@@ -220,16 +242,16 @@ namespace GUI_QuanLySanBong
         {
             try
             {
-                dataGridView1.AutoGenerateColumns = false;
+                dtgv_doanhthu.AutoGenerateColumns = false;
                 DataTable dtHD = new DataTable();
                 dtHD = HDControl.HienThiDuLieuTheoThang(cboThang.Text,cboNam.Text);
-                dataGridView1.DataSource = dtHD;
-                dataGridView1.Columns[0].DataPropertyName = "Ma_KhachHang";
-                dataGridView1.Columns[1].DataPropertyName = "Ma_San";
-                dataGridView1.Columns[2].DataPropertyName = "NgayLap_HD";
-                dataGridView1.Columns[3].DataPropertyName = "TongPhut_Da";
-                dataGridView1.Columns[4].DataPropertyName = "DonGia";
-                dataGridView1.Columns[5].DataPropertyName = "TongTien_HD";
+                dtgv_doanhthu.DataSource = dtHD;
+                dtgv_doanhthu.Columns[0].DataPropertyName = "Ma_KhachHang";
+                dtgv_doanhthu.Columns[1].DataPropertyName = "Ma_San";
+                dtgv_doanhthu.Columns[2].DataPropertyName = "NgayLap_HD";
+                dtgv_doanhthu.Columns[3].DataPropertyName = "TongPhut_Da";
+                dtgv_doanhthu.Columns[4].DataPropertyName = "DonGia";
+                dtgv_doanhthu.Columns[5].DataPropertyName = "TongTien_HD";
             }
             catch
             {
@@ -340,7 +362,31 @@ namespace GUI_QuanLySanBong
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-           
+            string maHD = null;
+            if (dgrvHD_Show.CurrentRow != null)
+            {
+                maHD = dgrvHD_Show.CurrentRow.Cells[0].Value.ToString();
+            }
+            if (maHD == null)
+                return;
+            if (HDControl.KiemTraDuLieuHD(maHD))
+            {
+                try
+                {
+                    HDControl.LuuDuLieuHD(maHD);
+                    LoadDoanhThu();
+                    MessageBox.Show("Luu hóa đơn " + maHD + " thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadHoaDon();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không thể xoá hóa đơn " + maHD + " chưa tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_them_Click(object sender, EventArgs e)

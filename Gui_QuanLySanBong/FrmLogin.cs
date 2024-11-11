@@ -129,11 +129,6 @@ namespace GUI_QuanLySanBong
         }
         // rồi đó
         
-        
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         //private void txtUserName_TextChanged(object sender, EventArgs e)
         //{
@@ -173,11 +168,6 @@ namespace GUI_QuanLySanBong
             this.Close();
         }
 
-        private void check_DangNhap_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             Close();
@@ -188,16 +178,44 @@ namespace GUI_QuanLySanBong
 
         }
 
-        private void guna2PictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        
+        private void txtPassWord_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) {
+                con = kn.conDB();
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter("Select * from Account where UserName='" + txtUserName.Text + "'and Password='" + txtPassWord.Text + "'", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                try
+                {
+                    if (dt.Rows.Count > 0)
+                    {
+                        this.Hide();
+                        Form1 fmain = new Form1(dt.Rows[0][0].ToString(), dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString(), dt.Rows[0][3].ToString());
+                        fmain.Show();
+                        MessageBox.Show("Đăng Nhập thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //this.Alert("Xin chào " + txtUserName.Text + "", Form_Alert1.enmType.Success);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sai tài khoản hoặc mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Không thể kết nối Server", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                con.Close();
+            }
+        }
     }
 }

@@ -237,7 +237,7 @@ namespace GUI_QuanLySanBong.Model
         }
         public bool TraSan(int Ma_ThueSan, DateTime thoiGianKetThuc, int donGia, int thanhTien)
         {
-            conn = kn.conDB();
+            /*conn = kn.conDB();
             try
             {
                 // define INSERT query with parameters
@@ -268,7 +268,9 @@ namespace GUI_QuanLySanBong.Model
             {
                 conn.Close();
             }
-            return KetQuaTruyVan;
+            return KetQuaTruyVan;*/
+            Xoa(Ma_ThueSan);
+            return true;
         }
         public bool Xoa(int Ma_ThueSan)
         {
