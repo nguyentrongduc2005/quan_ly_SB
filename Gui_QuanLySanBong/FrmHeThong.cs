@@ -206,34 +206,18 @@ namespace GUI_QuanLySanBong
             }
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
+       
+
+        
+      
+
+        private void btn_reset_Click(object sender, EventArgs e)
         {
             txtSearchUser.Text = "";
             txtUserName.Text = "";
             txtPassWord.Text = "";
             txtDisplayName.Text = "";
             txtUserName.Focus();
-        }
-
-        
-        private void txtSearchUser_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

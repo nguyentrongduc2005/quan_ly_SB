@@ -64,9 +64,9 @@ namespace GUI_QuanLySanBong
             this.guna2Panel2.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(317, 459);
+            this.guna2Panel2.Size = new System.Drawing.Size(423, 565);
             this.guna2Panel2.TabIndex = 4;
             this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
@@ -77,10 +77,10 @@ namespace GUI_QuanLySanBong
             this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(-24, -28);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(-32, -34);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(351, 531);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(468, 654);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 3;
             this.guna2PictureBox2.TabStop = false;
@@ -91,10 +91,10 @@ namespace GUI_QuanLySanBong
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(196, 10);
-            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(261, 12);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(28, 26);
+            this.guna2ControlBox2.Size = new System.Drawing.Size(37, 32);
             this.guna2ControlBox2.TabIndex = 5;
             // 
             // guna2ControlBox1
@@ -103,10 +103,10 @@ namespace GUI_QuanLySanBong
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Red;
             this.guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.Red;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(229, 10);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(305, 12);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(28, 26);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(37, 32);
             this.guna2ControlBox1.TabIndex = 4;
             this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
@@ -122,10 +122,10 @@ namespace GUI_QuanLySanBong
             this.guna2Panel1.Controls.Add(this.txtUserName);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2Panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2Panel1.Location = new System.Drawing.Point(317, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Location = new System.Drawing.Point(423, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(261, 459);
+            this.guna2Panel1.Size = new System.Drawing.Size(348, 565);
             this.guna2Panel1.TabIndex = 3;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -133,10 +133,10 @@ namespace GUI_QuanLySanBong
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::GUI_QuanLySanBong.Properties.Resources.UTH;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 28);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(35, 34);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(197, 116);
+            this.pictureBox1.Size = new System.Drawing.Size(263, 143);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -156,10 +156,10 @@ namespace GUI_QuanLySanBong
             this.guna2Button2.FillColor = System.Drawing.Color.Black;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(142, 301);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button2.Location = new System.Drawing.Point(189, 370);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(92, 31);
+            this.guna2Button2.Size = new System.Drawing.Size(123, 38);
             this.guna2Button2.TabIndex = 7;
             this.guna2Button2.Text = "Thoát";
             this.guna2Button2.UseTransparentBackground = true;
@@ -177,10 +177,10 @@ namespace GUI_QuanLySanBong
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.Location = new System.Drawing.Point(26, 301);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(0, 2, 2, 2);
+            this.guna2Button1.Location = new System.Drawing.Point(35, 370);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(0, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(105, 31);
+            this.guna2Button1.Size = new System.Drawing.Size(140, 38);
             this.guna2Button1.TabIndex = 6;
             this.guna2Button1.Text = "Đăng Nhập";
             this.guna2Button1.UseTransparentBackground = true;
@@ -200,13 +200,13 @@ namespace GUI_QuanLySanBong
             this.txtPassWord.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassWord.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassWord.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassWord.Location = new System.Drawing.Point(26, 194);
-            this.txtPassWord.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPassWord.Location = new System.Drawing.Point(35, 239);
+            this.txtPassWord.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassWord.Name = "txtPassWord";
             this.txtPassWord.PasswordChar = '●';
             this.txtPassWord.PlaceholderText = "Password";
             this.txtPassWord.SelectedText = "";
-            this.txtPassWord.Size = new System.Drawing.Size(208, 29);
+            this.txtPassWord.Size = new System.Drawing.Size(277, 36);
             this.txtPassWord.TabIndex = 2;
             this.txtPassWord.UseSystemPasswordChar = true;
             this.txtPassWord.TextChanged += new System.EventHandler(this.txtPassWord_TextChanged);
@@ -226,24 +226,24 @@ namespace GUI_QuanLySanBong
             this.txtUserName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUserName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserName.Location = new System.Drawing.Point(26, 150);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtUserName.Location = new System.Drawing.Point(35, 185);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.PasswordChar = '\0';
             this.txtUserName.PlaceholderText = "Tài Khoản";
             this.txtUserName.SelectedText = "";
-            this.txtUserName.Size = new System.Drawing.Size(208, 29);
+            this.txtUserName.Size = new System.Drawing.Size(277, 36);
             this.txtUserName.TabIndex = 1;
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(578, 459);
+            this.ClientSize = new System.Drawing.Size(771, 565);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

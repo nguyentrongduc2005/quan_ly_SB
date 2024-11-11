@@ -61,10 +61,7 @@ namespace GUI_QuanLySanBong
             cmbKH.ValueMember = "Ma_KhachHang";
         }
 
-        private void grTTKH_ThongTin_Enter(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void dtgvTTKH_Show_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -181,7 +178,7 @@ namespace GUI_QuanLySanBong
             }
             catch
             {
-                MessageBox.Show("Lỗi");
+                MessageBox.Show("Lỗi1");
             }
         }
 
@@ -202,8 +199,9 @@ namespace GUI_QuanLySanBong
             }
             catch
             {
-                MessageBox.Show("Lỗi");
+                MessageBox.Show("Lỗi2");
             }
+            tong();
         }
 
         private void btn_ThongKeNam_Click(object sender, EventArgs e)
@@ -352,13 +350,7 @@ namespace GUI_QuanLySanBong
             }
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            DialogResult r;
-            r = MessageBox.Show("Bạn có muốn thoát?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-            if (r == DialogResult.Yes)
-                Application.Exit();
-        }
+       
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
@@ -465,22 +457,6 @@ namespace GUI_QuanLySanBong
             }
         }
 
-        private void btn_reset_Click(object sender, EventArgs e)
-        {
-            txtMaKhachHang.Text = "";
-            txtTenKhachHang.Text = "";
-            txtDiaChi.Text = "";
-            txtSoDienThoai.Text = "";
-            txtMaKhachHang.Focus();
-        }
-
-        private void toolStripButton4_Click(object sender, EventArgs e)
-        {
-            DialogResult r;
-            r = MessageBox.Show("Bạn có muốn thoát?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-            if (r == DialogResult.Yes)
-                Application.Exit();
-        }
 
         private void txtSoDienThoai_TextChanged(object sender, EventArgs e)
         {
@@ -488,6 +464,7 @@ namespace GUI_QuanLySanBong
             {
                 if (!char.IsDigit(txtSoDienThoai.Text[txtSoDienThoai.TextLength - 1]))
                 {
+                    
                     this.errorProvider1.SetError(txtSoDienThoai, "Bạn phải nhập số lớn hơn 0");
                 }
                 else
@@ -610,6 +587,15 @@ namespace GUI_QuanLySanBong
             }
         }
 
-       
+        private void btn_reset_Click(object sender, EventArgs e)
+        {
+            txtMaKhachHang.Text = "";
+            txtTenKhachHang.Text = "";
+            txtDiaChi.Text = "";
+            txtSoDienThoai.Text = "";
+            txtMaKhachHang.Focus();
+        }
+
+        
     }
 }

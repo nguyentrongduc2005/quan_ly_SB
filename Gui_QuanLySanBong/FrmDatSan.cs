@@ -130,23 +130,20 @@ namespace GUI_QuanLySanBong
                 Debug.WriteLine(timestampBatDau);
                 Debug.WriteLine(timestampKetThuc);
                 if (timestampBatDau < timestampTgHienTai)
-                {
-                    Debug.WriteLine("loi");
-                    MessageBox.Show("thoi gian khong hop le 1");
+                {             
+                    MessageBox.Show("thời gian đã diễn ra","thông báo",MessageBoxButtons.OK,MessageBoxIcon.Hand);
                     return;
                 }
 
                 if (timestampKetThuc < timestampBatDau)
                 {
-                    Debug.WriteLine("loi");
-                    MessageBox.Show("thoi gian khong hop le 2");
+                    MessageBox.Show("thời gian không hợp lệ", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                     return;
                 }
 
                 if (timestampKetThuc - timestampBatDau < 3600)
-                {
-                    Debug.WriteLine("loi");
-                    MessageBox.Show("khong du 60p");
+                {                 
+                    MessageBox.Show("không đủ thời gian yêu cầu", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                     return;
                 }
 
