@@ -242,6 +242,7 @@
     <Content Include="Resources\login2.png" />
     <Content Include="Resources\login21.png" />
     <Content Include="Resources\login22.png" />
+    <Content Include="Resources\mainBackgrounp.png" />
     <Content Include="Resources\minimazar.png" />
     <Content Include="Resources\mirinda.jpg" />
     <Content Include="Resources\new customers.png" />
@@ -250,6 +251,7 @@
     <Content Include="Resources\nuocsuoi.jpg" />
     <Content Include="Resources\pesi.jpg" />
     <Content Include="Resources\photo.jpg" />
+    <Content Include="Resources\QLheThongUser-preview.png" />
     <Content Include="Resources\res.png" />
     <None Include="Resources\reset_undo_arrow_icon_149006.png" />
     <None Include="Resources\reset_undo_arrow_icon_1490061.png" />

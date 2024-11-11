@@ -24,7 +24,7 @@ namespace GUI_QuanLySanBong.Model
         {
             conn = kn.conDB();
             conn.Open();
-            string sql = "SELECT * FROM ThueSan";
+            string sql = "SELECT * FROM thueSan";
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);

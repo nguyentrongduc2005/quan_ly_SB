@@ -215,20 +215,23 @@ namespace GUI_QuanLySanBong
             txtUserName.Focus();
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            DialogResult r;
-            r = MessageBox.Show("Bạn có muốn thoát?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-            if (r == DialogResult.Yes)
-                Application.Exit();
-        }
-
+        
         private void txtSearchUser_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }

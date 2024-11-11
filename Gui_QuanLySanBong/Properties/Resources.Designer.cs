@@ -684,6 +684,16 @@ namespace GUI_QuanLySanBong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mainBackgrounp {
+            get {
+                object obj = ResourceManager.GetObject("mainBackgrounp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap new_customers {
             get {
                 object obj = ResourceManager.GetObject("new customers", resourceCulture);
@@ -737,6 +747,16 @@ namespace GUI_QuanLySanBong.Properties {
         internal static System.Drawing.Bitmap new_customers5 {
             get {
                 object obj = ResourceManager.GetObject("new customers5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap QLheThongUser_preview {
+            get {
+                object obj = ResourceManager.GetObject("QLheThongUser-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
