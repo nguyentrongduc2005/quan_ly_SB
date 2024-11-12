@@ -40,7 +40,6 @@
             this.btnlogo = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.iconminimizar = new System.Windows.Forms.PictureBox();
             this.iconrestaurar = new System.Windows.Forms.PictureBox();
             this.iconmaximizar = new System.Windows.Forms.PictureBox();
@@ -73,7 +72,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(333, 800);
             this.panelMenu.TabIndex = 0;
-            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
             // lblxinchao
             // 
@@ -206,7 +204,6 @@
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.Silver;
             this.panelTitleBar.Controls.Add(this.lblTitle);
-            this.panelTitleBar.Controls.Add(this.btnCloseChildForm);
             this.panelTitleBar.Controls.Add(this.iconminimizar);
             this.panelTitleBar.Controls.Add(this.iconrestaurar);
             this.panelTitleBar.Controls.Add(this.iconmaximizar);
@@ -230,19 +227,6 @@
             this.lblTitle.TabIndex = 6;
             this.lblTitle.Text = "SÂN BÓNG UTH";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnCloseChildForm
-            // 
-            this.btnCloseChildForm.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
-            this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseChildForm.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseChildForm.Image")));
-            this.btnCloseChildForm.Location = new System.Drawing.Point(0, 0);
-            this.btnCloseChildForm.Name = "btnCloseChildForm";
-            this.btnCloseChildForm.Size = new System.Drawing.Size(75, 55);
-            this.btnCloseChildForm.TabIndex = 5;
-            this.btnCloseChildForm.UseVisualStyleBackColor = true;
-            this.btnCloseChildForm.Visible = false;
             // 
             // iconminimizar
             // 
@@ -361,7 +345,6 @@
         private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblxinchao;
-        private System.Windows.Forms.Button btnCloseChildForm;
     }
 }
 

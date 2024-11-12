@@ -199,15 +199,6 @@ namespace GUI_QuanLySanBong
             f.Show();
         }
 
-        private void btnBaoCaoThongKe_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void panelMenu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {

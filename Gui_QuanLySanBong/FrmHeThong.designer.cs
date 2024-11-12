@@ -30,8 +30,8 @@ namespace GUI_QuanLySanBong
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHeThong));
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.dtgvQLTK_Show = new System.Windows.Forms.DataGridView();
@@ -54,6 +54,7 @@ namespace GUI_QuanLySanBong
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.lblSearchUser = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_reset = new System.Windows.Forms.Button();
             this.cbbQuyen = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -64,7 +65,6 @@ namespace GUI_QuanLySanBong
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.btn_reset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvQLTK_Show)).BeginInit();
             this.toolStripChucNang.SuspendLayout();
@@ -86,14 +86,14 @@ namespace GUI_QuanLySanBong
             // 
             this.dtgvQLTK_Show.AllowUserToAddRows = false;
             this.dtgvQLTK_Show.BackgroundColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvQLTK_Show.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvQLTK_Show.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvQLTK_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvQLTK_Show.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UserName,
@@ -105,17 +105,17 @@ namespace GUI_QuanLySanBong
             this.dtgvQLTK_Show.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvQLTK_Show.Name = "dtgvQLTK_Show";
             this.dtgvQLTK_Show.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvQLTK_Show.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvQLTK_Show.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvQLTK_Show.RowHeadersWidth = 51;
             this.dtgvQLTK_Show.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvQLTK_Show.Size = new System.Drawing.Size(751, 531);
+            this.dtgvQLTK_Show.Size = new System.Drawing.Size(775, 500);
             this.dtgvQLTK_Show.TabIndex = 1;
             this.dtgvQLTK_Show.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvQLTK_Show_CellClick);
             // 
@@ -156,6 +156,7 @@ namespace GUI_QuanLySanBong
             // 
             // toolStripChucNang
             // 
+            this.toolStripChucNang.BackColor = System.Drawing.Color.LightBlue;
             this.toolStripChucNang.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStripChucNang.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnThem,
@@ -164,7 +165,7 @@ namespace GUI_QuanLySanBong
             this.toolStripSeparator1});
             this.toolStripChucNang.Location = new System.Drawing.Point(4, 4);
             this.toolStripChucNang.Name = "toolStripChucNang";
-            this.toolStripChucNang.Size = new System.Drawing.Size(1184, 27);
+            this.toolStripChucNang.Size = new System.Drawing.Size(1184, 31);
             this.toolStripChucNang.TabIndex = 13;
             this.toolStripChucNang.Text = "toolStrip1";
             // 
@@ -173,7 +174,7 @@ namespace GUI_QuanLySanBong
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(70, 24);
+            this.btnThem.Size = new System.Drawing.Size(70, 28);
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -182,7 +183,7 @@ namespace GUI_QuanLySanBong
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(59, 24);
+            this.btnXoa.Size = new System.Drawing.Size(59, 28);
             this.btnXoa.Text = "Xoá";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -191,14 +192,14 @@ namespace GUI_QuanLySanBong
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(58, 24);
+            this.btnSua.Size = new System.Drawing.Size(58, 28);
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // miniToolStrip
             // 
@@ -227,7 +228,7 @@ namespace GUI_QuanLySanBong
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tabPage1.BackColor = System.Drawing.Color.SteelBlue;
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.toolStripChucNang);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -240,22 +241,23 @@ namespace GUI_QuanLySanBong
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(4, 31);
+            this.panel2.Location = new System.Drawing.Point(4, 35);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1184, 613);
+            this.panel2.Size = new System.Drawing.Size(1184, 609);
             this.panel2.TabIndex = 14;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.dtgvQLTK_Show);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(433, 82);
+            this.panel3.Location = new System.Drawing.Point(409, 109);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(751, 531);
+            this.panel3.Size = new System.Drawing.Size(775, 500);
             this.panel3.TabIndex = 11;
             // 
             // groupBox1
@@ -266,11 +268,11 @@ namespace GUI_QuanLySanBong
             this.groupBox1.Controls.Add(this.lblSearchUser);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(433, 0);
+            this.groupBox1.Location = new System.Drawing.Point(409, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(751, 82);
+            this.groupBox1.Size = new System.Drawing.Size(775, 109);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             // 
@@ -295,7 +297,6 @@ namespace GUI_QuanLySanBong
             this.txtSearchUser.SelectedText = "";
             this.txtSearchUser.Size = new System.Drawing.Size(279, 36);
             this.txtSearchUser.TabIndex = 2;
-            
             // 
             // btnTimKiem
             // 
@@ -344,11 +345,23 @@ namespace GUI_QuanLySanBong
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(433, 613);
+            this.groupBox2.Size = new System.Drawing.Size(409, 609);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // btn_reset
+            // 
+            this.btn_reset.BackColor = System.Drawing.Color.LightBlue;
+            this.btn_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reset.Location = new System.Drawing.Point(223, 509);
+            this.btn_reset.Name = "btn_reset";
+            this.btn_reset.Size = new System.Drawing.Size(96, 27);
+            this.btn_reset.TabIndex = 12;
+            this.btn_reset.Text = "reset";
+            this.btn_reset.UseVisualStyleBackColor = false;
+            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
             // cbbQuyen
             // 
@@ -395,7 +408,6 @@ namespace GUI_QuanLySanBong
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            
             // 
             // txtPassWord
             // 
@@ -451,19 +463,6 @@ namespace GUI_QuanLySanBong
             this.label8.Size = new System.Drawing.Size(79, 17);
             this.label8.TabIndex = 0;
             this.label8.Text = "UserName:";
-            
-            // 
-            // btn_reset
-            // 
-            this.btn_reset.BackColor = System.Drawing.Color.LightBlue;
-            this.btn_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_reset.Location = new System.Drawing.Point(223, 509);
-            this.btn_reset.Name = "btn_reset";
-            this.btn_reset.Size = new System.Drawing.Size(96, 27);
-            this.btn_reset.TabIndex = 12;
-            this.btn_reset.Text = "reset";
-            this.btn_reset.UseVisualStyleBackColor = false;
-            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
             // FrmHeThong
             // 

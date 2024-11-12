@@ -298,13 +298,7 @@ namespace GUI_QuanLySanBong
             }
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            txtmasan.Text = "";
-            cbbloaisan.Text = "";
-            txttensan.Text = "";
-            txtmasan.Focus();
-        }
+        
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
@@ -390,29 +384,11 @@ namespace GUI_QuanLySanBong
             }
         }
 
-        private void btn_Reset_Click(object sender, EventArgs e)
-        {
-            txtloaisan.Text = "";
-            txtTenLoaiSan.Text = "";
-            txtgialoaisan.Text = "";
-            txtloaisan.Focus();
-        }
+       
 
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            DialogResult r;
-            r = MessageBox.Show("Bạn có muốn thoát?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-            if (r == DialogResult.Yes)
-                Application.Exit();
-        }
+       
 
-        private void toolStripButton4_Click(object sender, EventArgs e)
-        {
-            DialogResult r;
-            r = MessageBox.Show("Bạn có muốn thoát?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-            if (r == DialogResult.Yes)
-                Application.Exit();
-        }
+       
 
         private void txtgialoaisan_TextChanged(object sender, EventArgs e)
         {
@@ -450,5 +426,23 @@ namespace GUI_QuanLySanBong
         {
 
         }
+
+        private void btn_reset_Click(object sender, EventArgs e)
+        {
+            txtmasan.Text = "";
+            cbbloaisan.Text = "";
+            txttensan.Text = "";
+            txtmasan.Focus();
+        }
+
+        private void btnreset_Click(object sender, EventArgs e)
+        {
+            txtloaisan.Text = "";
+            txtTenLoaiSan.Text = "";
+            txtgialoaisan.Text = "";
+            txtloaisan.Focus();
+        }
+
+     
     }
 }

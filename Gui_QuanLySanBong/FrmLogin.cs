@@ -122,6 +122,8 @@ namespace GUI_QuanLySanBong
             con.Close();
 
         }
+
+
        
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -151,7 +153,7 @@ namespace GUI_QuanLySanBong
 
         private void txtPassWord_TextChanged(object sender, EventArgs e)
         {
-
+            txtPassWord.UseSystemPasswordChar = true;
         }
 
         //private void txtUserName_Click(object sender, EventArgs e)
@@ -215,6 +217,24 @@ namespace GUI_QuanLySanBong
                 }
 
                 con.Close();
+            }
+        }
+
+        private void ptbImage_Click(object sender, EventArgs e)
+        {
+
+            if (txtPassWord.UseSystemPasswordChar)
+            {
+                txtPassWord.UseSystemPasswordChar = false;
+               
+                Bitmap bitmap = new Bitmap(Resources.invisible_60px1);
+                ptbImage.Image = bitmap;
+                
+            }
+            else { 
+                txtPassWord.UseSystemPasswordChar= true;
+                Bitmap bitmap = new Bitmap(Resources.Uchiha_Eyes_48px);
+                ptbImage.Image = bitmap;
             }
         }
     }

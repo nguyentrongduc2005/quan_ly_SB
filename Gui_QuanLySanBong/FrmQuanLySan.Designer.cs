@@ -30,10 +30,11 @@ namespace GUI_QuanLySanBong
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmQuanLySan));
             this.grTTKH_ThongTin = new System.Windows.Forms.GroupBox();
+            this.btnreset = new System.Windows.Forms.Button();
             this.txtTenLoaiSan = new System.Windows.Forms.TextBox();
             this.txtloaisan = new System.Windows.Forms.TextBox();
             this.txtgialoaisan = new System.Windows.Forms.TextBox();
@@ -59,6 +60,7 @@ namespace GUI_QuanLySanBong
             this.txtSearchUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_reser = new System.Windows.Forms.Button();
             this.txtmasan = new System.Windows.Forms.TextBox();
             this.cbbloaisan = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -71,9 +73,7 @@ namespace GUI_QuanLySanBong
             this.btnThem = new System.Windows.Forms.ToolStripButton();
             this.btnXoa = new System.Windows.Forms.ToolStripButton();
             this.btnSua = new System.Windows.Forms.ToolStripButton();
-            this.btnReset = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnThoat = new System.Windows.Forms.ToolStripButton();
             this.cbbloaisann = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -82,9 +82,7 @@ namespace GUI_QuanLySanBong
             this.btn_Them = new System.Windows.Forms.ToolStripButton();
             this.btn_Xoa = new System.Windows.Forms.ToolStripButton();
             this.btn_Sua = new System.Windows.Forms.ToolStripButton();
-            this.btn_Reset = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.grTTKH_ThongTin.SuspendLayout();
             this.grTKKH_DanhMuc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvQLLS_Show)).BeginInit();
@@ -108,7 +106,8 @@ namespace GUI_QuanLySanBong
             // 
             // grTTKH_ThongTin
             // 
-            this.grTTKH_ThongTin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.grTTKH_ThongTin.BackColor = System.Drawing.Color.SteelBlue;
+            this.grTTKH_ThongTin.Controls.Add(this.btnreset);
             this.grTTKH_ThongTin.Controls.Add(this.txtTenLoaiSan);
             this.grTTKH_ThongTin.Controls.Add(this.txtloaisan);
             this.grTTKH_ThongTin.Controls.Add(this.txtgialoaisan);
@@ -124,6 +123,18 @@ namespace GUI_QuanLySanBong
             this.grTTKH_ThongTin.TabIndex = 2;
             this.grTTKH_ThongTin.TabStop = false;
             this.grTTKH_ThongTin.Text = "Thông tin";
+            // 
+            // btnreset
+            // 
+            this.btnreset.BackColor = System.Drawing.Color.Silver;
+            this.btnreset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnreset.Location = new System.Drawing.Point(273, 264);
+            this.btnreset.Name = "btnreset";
+            this.btnreset.Size = new System.Drawing.Size(87, 30);
+            this.btnreset.TabIndex = 15;
+            this.btnreset.Text = "reset";
+            this.btnreset.UseVisualStyleBackColor = false;
+            this.btnreset.Click += new System.EventHandler(this.btnreset_Click);
             // 
             // txtTenLoaiSan
             // 
@@ -157,7 +168,7 @@ namespace GUI_QuanLySanBong
             this.label5.Location = new System.Drawing.Point(19, 223);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 17);
+            this.label5.Size = new System.Drawing.Size(81, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "Giá loại sân:";
             // 
@@ -167,7 +178,7 @@ namespace GUI_QuanLySanBong
             this.label4.Location = new System.Drawing.Point(19, 137);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 17);
+            this.label4.Size = new System.Drawing.Size(84, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Tên loại sân:";
             // 
@@ -177,13 +188,13 @@ namespace GUI_QuanLySanBong
             this.label3.Location = new System.Drawing.Point(19, 50);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 17);
+            this.label3.Size = new System.Drawing.Size(61, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Loại sân:";
             // 
             // lblmasan
             // 
-            this.lblmasan.Location = new System.Drawing.Point(63, 30);
+            this.lblmasan.Location = new System.Drawing.Point(63, 36);
             this.lblmasan.Name = "lblmasan";
             this.lblmasan.Size = new System.Drawing.Size(96, 25);
             this.lblmasan.TabIndex = 1;
@@ -257,14 +268,14 @@ namespace GUI_QuanLySanBong
             // 
             this.dtgvQLS_Show.AllowUserToAddRows = false;
             this.dtgvQLS_Show.BackgroundColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvQLS_Show.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvQLS_Show.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgvQLS_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvQLS_Show.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UserName,
@@ -275,17 +286,17 @@ namespace GUI_QuanLySanBong
             this.dtgvQLS_Show.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvQLS_Show.Name = "dtgvQLS_Show";
             this.dtgvQLS_Show.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvQLS_Show.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvQLS_Show.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dtgvQLS_Show.RowHeadersWidth = 51;
             this.dtgvQLS_Show.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvQLS_Show.Size = new System.Drawing.Size(781, 517);
+            this.dtgvQLS_Show.Size = new System.Drawing.Size(739, 493);
             this.dtgvQLS_Show.TabIndex = 0;
             this.dtgvQLS_Show.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvQLS_Show_CellClick);
             // 
@@ -315,7 +326,7 @@ namespace GUI_QuanLySanBong
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tabPage1.BackColor = System.Drawing.Color.SteelBlue;
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.toolStripChucNang);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -328,22 +339,23 @@ namespace GUI_QuanLySanBong
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(4, 35);
+            this.panel2.Location = new System.Drawing.Point(4, 31);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1184, 609);
+            this.panel2.Size = new System.Drawing.Size(1184, 613);
             this.panel2.TabIndex = 14;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.grTTKH_DanhSach);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 69);
+            this.panel3.Location = new System.Drawing.Point(0, 97);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(789, 540);
+            this.panel3.Size = new System.Drawing.Size(747, 516);
             this.panel3.TabIndex = 11;
             // 
             // grTTKH_DanhSach
@@ -356,14 +368,14 @@ namespace GUI_QuanLySanBong
             this.grTTKH_DanhSach.Margin = new System.Windows.Forms.Padding(4);
             this.grTTKH_DanhSach.Name = "grTTKH_DanhSach";
             this.grTTKH_DanhSach.Padding = new System.Windows.Forms.Padding(4);
-            this.grTTKH_DanhSach.Size = new System.Drawing.Size(789, 540);
+            this.grTTKH_DanhSach.Size = new System.Drawing.Size(747, 516);
             this.grTTKH_DanhSach.TabIndex = 11;
             this.grTTKH_DanhSach.TabStop = false;
             this.grTTKH_DanhSach.Text = "Danh sách";
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupBox1.BackColor = System.Drawing.Color.SteelBlue;
             this.groupBox1.Controls.Add(this.txtSearchUser);
             this.groupBox1.Controls.Add(this.btnTimKiem);
             this.groupBox1.Controls.Add(this.lblmasan);
@@ -373,7 +385,7 @@ namespace GUI_QuanLySanBong
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(789, 69);
+            this.groupBox1.Size = new System.Drawing.Size(747, 97);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm Kiếm";
@@ -387,19 +399,16 @@ namespace GUI_QuanLySanBong
             this.txtSearchUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtSearchUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtSearchUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchUser.DisabledState.Parent = this.txtSearchUser;
             this.txtSearchUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearchUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchUser.FocusedState.Parent = this.txtSearchUser;
             this.txtSearchUser.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearchUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchUser.HoverState.Parent = this.txtSearchUser;
-            this.txtSearchUser.Location = new System.Drawing.Point(185, 23);
+            this.txtSearchUser.Location = new System.Drawing.Point(165, 30);
+            this.txtSearchUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearchUser.Name = "txtSearchUser";
             this.txtSearchUser.PasswordChar = '\0';
             this.txtSearchUser.PlaceholderText = "Nhập tên sân để tìm kiếm...";
             this.txtSearchUser.SelectedText = "";
-            this.txtSearchUser.ShadowDecoration.Parent = this.txtSearchUser;
             this.txtSearchUser.Size = new System.Drawing.Size(279, 36);
             this.txtSearchUser.TabIndex = 3;
             // 
@@ -409,7 +418,7 @@ namespace GUI_QuanLySanBong
             this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
             this.btnTimKiem.Image = global::GUI_QuanLySanBong.Properties.Resources.search_invoice4;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTimKiem.Location = new System.Drawing.Point(517, 12);
+            this.btnTimKiem.Location = new System.Drawing.Point(509, 24);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
@@ -422,7 +431,8 @@ namespace GUI_QuanLySanBong
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupBox2.BackColor = System.Drawing.Color.SteelBlue;
+            this.groupBox2.Controls.Add(this.btn_reser);
             this.groupBox2.Controls.Add(this.txtmasan);
             this.groupBox2.Controls.Add(this.cbbloaisan);
             this.groupBox2.Controls.Add(this.panel1);
@@ -433,14 +443,26 @@ namespace GUI_QuanLySanBong
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(789, 0);
+            this.groupBox2.Location = new System.Drawing.Point(747, 0);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(395, 609);
+            this.groupBox2.Size = new System.Drawing.Size(437, 613);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin";
+            // 
+            // btn_reser
+            // 
+            this.btn_reser.BackColor = System.Drawing.Color.Silver;
+            this.btn_reser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reser.Location = new System.Drawing.Point(275, 451);
+            this.btn_reser.Name = "btn_reser";
+            this.btn_reser.Size = new System.Drawing.Size(76, 31);
+            this.btn_reser.TabIndex = 12;
+            this.btn_reser.Text = "reset";
+            this.btn_reser.UseVisualStyleBackColor = false;
+            this.btn_reser.Click += new System.EventHandler(this.btn_reset_Click);
             // 
             // txtmasan
             // 
@@ -462,21 +484,21 @@ namespace GUI_QuanLySanBong
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(95, 22);
+            this.panel1.Location = new System.Drawing.Point(107, 36);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(225, 213);
+            this.panel1.Size = new System.Drawing.Size(244, 179);
             this.panel1.TabIndex = 8;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::GUI_QuanLySanBong.Properties.Resources.traibanh1;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 213);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.Size = new System.Drawing.Size(244, 179);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -520,17 +542,16 @@ namespace GUI_QuanLySanBong
             // 
             // toolStripChucNang
             // 
+            this.toolStripChucNang.BackColor = System.Drawing.Color.LightBlue;
             this.toolStripChucNang.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStripChucNang.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnThem,
             this.btnXoa,
             this.btnSua,
-            this.btnReset,
-            this.toolStripSeparator1,
-            this.btnThoat});
+            this.toolStripSeparator1});
             this.toolStripChucNang.Location = new System.Drawing.Point(4, 4);
             this.toolStripChucNang.Name = "toolStripChucNang";
-            this.toolStripChucNang.Size = new System.Drawing.Size(1184, 31);
+            this.toolStripChucNang.Size = new System.Drawing.Size(1184, 27);
             this.toolStripChucNang.TabIndex = 13;
             this.toolStripChucNang.Text = "toolStrip1";
             // 
@@ -539,7 +560,7 @@ namespace GUI_QuanLySanBong
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(70, 28);
+            this.btnThem.Size = new System.Drawing.Size(70, 24);
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -548,7 +569,7 @@ namespace GUI_QuanLySanBong
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(59, 28);
+            this.btnXoa.Size = new System.Drawing.Size(59, 24);
             this.btnXoa.Text = "Xoá";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -557,32 +578,14 @@ namespace GUI_QuanLySanBong
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(58, 28);
+            this.btnSua.Size = new System.Drawing.Size(58, 24);
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnReset
-            // 
-            this.btnReset.Image = global::GUI_QuanLySanBong.Properties.Resources.reset_undo_arrow_icon_1490061;
-            this.btnReset.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(69, 28);
-            this.btnReset.Text = "Reset";
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
-            this.btnThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(71, 28);
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // cbbloaisann
             // 
@@ -598,7 +601,7 @@ namespace GUI_QuanLySanBong
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tabPage2.BackColor = System.Drawing.Color.SteelBlue;
             this.tabPage2.Controls.Add(this.panel5);
             this.tabPage2.Controls.Add(this.panel4);
             this.tabPage2.Controls.Add(this.toolStrip1);
@@ -630,14 +633,13 @@ namespace GUI_QuanLySanBong
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.LightBlue;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_Them,
             this.btn_Xoa,
             this.btn_Sua,
-            this.btn_Reset,
-            this.toolStripSeparator2,
-            this.toolStripButton4});
+            this.toolStripSeparator2});
             this.toolStrip1.Location = new System.Drawing.Point(4, 4);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1184, 27);
@@ -650,7 +652,7 @@ namespace GUI_QuanLySanBong
             this.btn_Them.Image = ((System.Drawing.Image)(resources.GetObject("btn_Them.Image")));
             this.btn_Them.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(70, 28);
+            this.btn_Them.Size = new System.Drawing.Size(70, 24);
             this.btn_Them.Text = "Thêm";
             this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
@@ -659,7 +661,7 @@ namespace GUI_QuanLySanBong
             this.btn_Xoa.Image = ((System.Drawing.Image)(resources.GetObject("btn_Xoa.Image")));
             this.btn_Xoa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(59, 28);
+            this.btn_Xoa.Size = new System.Drawing.Size(59, 24);
             this.btn_Xoa.Text = "Xoá";
             this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
@@ -668,32 +670,14 @@ namespace GUI_QuanLySanBong
             this.btn_Sua.Image = ((System.Drawing.Image)(resources.GetObject("btn_Sua.Image")));
             this.btn_Sua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(58, 28);
+            this.btn_Sua.Size = new System.Drawing.Size(58, 24);
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
-            // 
-            // btn_Reset
-            // 
-            this.btn_Reset.Image = global::GUI_QuanLySanBong.Properties.Resources.reset_undo_arrow_icon_1490062;
-            this.btn_Reset.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_Reset.Name = "btn_Reset";
-            this.btn_Reset.Size = new System.Drawing.Size(69, 28);
-            this.btn_Reset.Text = "Reset";
-            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(71, 28);
-            this.toolStripButton4.Text = "Thoát";
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // FrmQuanLySan
             // 
@@ -773,20 +757,18 @@ namespace GUI_QuanLySanBong
         private System.Windows.Forms.ToolStripButton btnThem;
         private System.Windows.Forms.ToolStripButton btnXoa;
         private System.Windows.Forms.ToolStripButton btnSua;
-        private System.Windows.Forms.ToolStripButton btnReset;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton btnThoat;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btn_Them;
         private System.Windows.Forms.ToolStripButton btn_Xoa;
         private System.Windows.Forms.ToolStripButton btn_Sua;
-        private System.Windows.Forms.ToolStripButton btn_Reset;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtTenLoaiSan;
+        private System.Windows.Forms.Button btn_reser;
+        private System.Windows.Forms.Button btnreset;
     }
 }

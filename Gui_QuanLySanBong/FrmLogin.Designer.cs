@@ -30,6 +30,7 @@ namespace GUI_QuanLySanBong
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -43,10 +44,12 @@ namespace GUI_QuanLySanBong
             this.txtPassWord = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.ptbImage = new System.Windows.Forms.PictureBox();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbImage)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -66,7 +69,7 @@ namespace GUI_QuanLySanBong
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(423, 565);
+            this.guna2Panel2.Size = new System.Drawing.Size(407, 565);
             this.guna2Panel2.TabIndex = 4;
             this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
@@ -91,7 +94,7 @@ namespace GUI_QuanLySanBong
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(261, 12);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(277, 12);
             this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(37, 32);
@@ -103,7 +106,7 @@ namespace GUI_QuanLySanBong
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Red;
             this.guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.Red;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(305, 12);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(321, 12);
             this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(37, 32);
@@ -113,6 +116,7 @@ namespace GUI_QuanLySanBong
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.guna2Panel1.Controls.Add(this.ptbImage);
             this.guna2Panel1.Controls.Add(this.guna2ControlBox2);
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
@@ -122,10 +126,10 @@ namespace GUI_QuanLySanBong
             this.guna2Panel1.Controls.Add(this.txtUserName);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2Panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2Panel1.Location = new System.Drawing.Point(423, 0);
+            this.guna2Panel1.Location = new System.Drawing.Point(407, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(348, 565);
+            this.guna2Panel1.Size = new System.Drawing.Size(364, 565);
             this.guna2Panel1.TabIndex = 3;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -156,7 +160,7 @@ namespace GUI_QuanLySanBong
             this.guna2Button2.FillColor = System.Drawing.Color.Black;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(189, 370);
+            this.guna2Button2.Location = new System.Drawing.Point(197, 370);
             this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(123, 38);
@@ -200,15 +204,14 @@ namespace GUI_QuanLySanBong
             this.txtPassWord.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassWord.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassWord.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassWord.Location = new System.Drawing.Point(35, 239);
+            this.txtPassWord.Location = new System.Drawing.Point(35, 241);
             this.txtPassWord.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassWord.Name = "txtPassWord";
-            this.txtPassWord.PasswordChar = '●';
+            this.txtPassWord.PasswordChar = '\0';
             this.txtPassWord.PlaceholderText = "Password";
             this.txtPassWord.SelectedText = "";
             this.txtPassWord.Size = new System.Drawing.Size(277, 36);
             this.txtPassWord.TabIndex = 2;
-            this.txtPassWord.UseSystemPasswordChar = true;
             this.txtPassWord.TextChanged += new System.EventHandler(this.txtPassWord_TextChanged);
             this.txtPassWord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassWord_KeyDown);
             // 
@@ -235,6 +238,17 @@ namespace GUI_QuanLySanBong
             this.txtUserName.Size = new System.Drawing.Size(277, 36);
             this.txtUserName.TabIndex = 1;
             // 
+            // ptbImage
+            // 
+            this.ptbImage.Image = ((System.Drawing.Image)(resources.GetObject("ptbImage.Image")));
+            this.ptbImage.Location = new System.Drawing.Point(314, 251);
+            this.ptbImage.Name = "ptbImage";
+            this.ptbImage.Size = new System.Drawing.Size(38, 17);
+            this.ptbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbImage.TabIndex = 8;
+            this.ptbImage.TabStop = false;
+            this.ptbImage.Click += new System.EventHandler(this.ptbImage_Click);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -251,6 +265,7 @@ namespace GUI_QuanLySanBong
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,5 +284,6 @@ namespace GUI_QuanLySanBong
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private System.Windows.Forms.PictureBox ptbImage;
     }
 }
