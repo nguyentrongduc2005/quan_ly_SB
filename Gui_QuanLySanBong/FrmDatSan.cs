@@ -303,7 +303,7 @@ namespace GUI_QuanLySanBong
                     {
                         MessageBox.Show("Trả sân thành công");
                         LoadThuesan();
-                        dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                        
                         try
                         {
                             if (hd.ThemHoaDon(cbbmakh.SelectedValue.ToString(), cbbsan.SelectedValue.ToString(), ngayKetThuc, soGio, Convert.ToInt32(nbDonGia.Value), thanhTien))
